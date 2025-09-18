@@ -1,14 +1,302 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Balls and Bricks Game</title>
+    <title>دیجی‌شهر - DGShahr</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Balls and Bricks</h1>
-    <canvas id="gameCanvas" width="480" height="320"></canvas>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#">دیجی‌شهر</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">فروشگاه</a></li>
+                    <li><a href="#">بلاگ</a></li>
+                    <li><a href="#">درباره ما</a></li>
+                    <li><a href="#">تماس با ما</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="#" class="login-btn">ورود / ثبت نام</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>خریدی که اعتبار داره</h1>
+                    <p>دریافت وام خرید کالا و اعتبار دیجیتال از تمام فروشگاه‌های آنلاین و حضوری</p>
+                    <div class="loan-calculator">
+                        <div class="form-group">
+                            <label for="loan-amount">مبلغ وام (تومان)</label>
+                            <input type="text" id="loan-amount" value="۷۰,۰۰۰,۰۰۰">
+                        </div>
+                        <div class="form-group">
+                            <label for="repayment-period">زمان بازپرداخت</label>
+                            <input type="text" id="repayment-period" value="۱۲ ماهه">
+                        </div>
+                        <button class="btn-primary">دریافت وام و خرید قسطی</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://via.placeholder.com/450" alt="اسکوتر برقی">
+                </div>
+            </div>
+        </section>
+        <section id="categories">
+            <div class="container">
+                <h2>خرید اقساطی انواع کالا و خدمات</h2>
+                <div class="category-grid">
+                    <div class="category-item">
+                        <img src="https://via.placeholder.com/80" alt="کالای دیجیتال">
+                        <span>کالای دیجیتال</span>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://via.placeholder.com/80" alt="لوازم خانگی">
+                        <span>لوازم خانگی</span>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://via.placeholder.com/80" alt="مبلمان">
+                        <span>مبلمان</span>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://via.placeholder.com/80" alt="اکسسوری">
+                        <span>اکسسوری</span>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://via.placeholder.com/80" alt="پوشاک">
+                        <span>پوشاک</span>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://via.placeholder.com/80" alt="لوازم سفر">
+                        <span>لوازم سفر</span>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://via.placeholder.com/80" alt="موتور سیکلت">
+                        <span>موتور سیکلت</span>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://via.placeholder.com/80" alt="ورزش و سفر">
+                        <span>ورزش و سفر</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="credit-banner">
+            <div class="container">
+                <h2>کارتت رو شارژ کن، اعتباری خرید کن!</h2>
+                <div class="credit-cards-container">
+                    <div class="credit-card">
+                        <h3>اعتبار خرید از دیجی‌شهر</h3>
+                        <p class="amount">۲۰۰ میلیون تومان</p>
+                        <span>ویژه خرید انواع کالا</span>
+                        <a href="#" class="btn-secondary">دریافت اعتبار</a>
+                    </div>
+                    <div class="credit-card">
+                        <h3>اعتبار خرید از همه جا</h3>
+                        <p class="amount">۱۵۰ میلیون تومان</p>
+                        <span>ویژه خرید از تمام فروشگاه‌ها</span>
+                        <a href="#" class="btn-secondary">دریافت اعتبار</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="loan-steps">
+            <div class="container">
+                <h2>مراحل دریافت وام و اعتبار دیجی‌شهر</h2>
+                <div class="steps-container">
+                    <div class="step">
+                        <img src="https://via.placeholder.com/60" alt="ثبت نام">
+                        <h3>ثبت نام</h3>
+                        <p>در دیجی‌شهر ثبت نام کنید و پروفایل خود را تکمیل کنید.</p>
+                    </div>
+                    <div class="step">
+                        <img src="https://via.placeholder.com/60" alt="انتخاب مبلغ">
+                        <h3>انتخاب مبلغ</h3>
+                        <p>مبلغ وام و زمان بازپرداخت را به دلخواه انتخاب کنید.</p>
+                    </div>
+                    <div class="step">
+                        <img src="https://via.placeholder.com/60" alt="اعتبارسنجی">
+                        <h3>اعتبارسنجی</h3>
+                        <p>اطلاعات شما به صورت آنلاین و سریع اعتبارسنجی می‌شود.</p>
+                    </div>
+                    <div class="step">
+                        <img src="https://via.placeholder.com/60" alt="دریافت اعتبار">
+                        <h3>دریافت اعتبار</h3>
+                        <p>اعتبار خود را دریافت کرده و از خرید لذت ببرید.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="loan-providers">
+            <div class="container">
+                <h2>پرداخت اقساط با همکاری معتبرترین بانک‌ها و لندتک‌های کشور</h2>
+                <div class="logos-container">
+                    <img src="https://via.placeholder.com/100x50" alt="Bank Logo 1">
+                    <img src="https://via.placeholder.com/100x50" alt="Bank Logo 2">
+                    <img src="https://via.placeholder.com/100x50" alt="Bank Logo 3">
+                    <img src="https://via.placeholder.com/100x50" alt="Bank Logo 4">
+                    <img src="https://via.placeholder.com/100x50" alt="Bank Logo 5">
+                </div>
+            </div>
+        </section>
+        <section id="app-showcase">
+            <div class="container">
+                <div class="app-showcase-image">
+                    <img src="https://via.placeholder.com/300x600" alt="App on phone">
+                </div>
+                <div class="app-showcase-content">
+                    <h2>اپلیکیشن دیجی‌شهر</h2>
+                    <p>با اپلیکیشن دیجی‌شهر، راحت‌تر و سریع‌تر از همیشه اعتبار بگیرید و اقساطی خرید کنید. همه چیز زیر انگشتان شماست!</p>
+                    <div class="app-buttons">
+                        <a href="#" class="app-btn"><img src="https://via.placeholder.com/150x50" alt="Google Play"></a>
+                        <a href="#" class="app-btn"><img src="https://via.placeholder.com/150x50" alt="App Store"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="testimonials">
+            <div class="container">
+                <h2>تجربه خرید اقساطی در دیجی‌شهر</h2>
+                <div class="testimonials-container">
+                    <div class="testimonial-card">
+                        <div class="testimonial-author">
+                            <img src="https://via.placeholder.com/60" alt="User 1">
+                            <div>
+                                <h4>آقای محمودی</h4>
+                                <span>خریدار PS5</span>
+                            </div>
+                        </div>
+                        <p>"تجربه خیلی خوبی بود. تونستم با اعتبار دیجی‌شهر کنسول بازی مورد علاقه‌ام رو بخرم و خیلی سریع به دستم رسید."</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-author">
+                            <img src="https://via.placeholder.com/60" alt="User 2">
+                            <div>
+                                <h4>خانم شایان</h4>
+                                <span>خریدار گوشی موبایل</span>
+                            </div>
+                        </div>
+                        <p>"فرآیند دریافت اعتبار خیلی ساده و شفاف بود. از خریدم راضی هستم و به دوستانم هم پیشنهاد می‌کنم."</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-author">
+                            <img src="https://via.placeholder.com/60" alt="User 3">
+                            <div>
+                                <h4>آقای صدیقی</h4>
+                                <span>خریدار تلویزیون</span>
+                            </div>
+                        </div>
+                        <p>"پشتیبانی عالی بود و به تمام سوالاتم با حوصله جواب دادن. ممنون از تیم خوب دیجی‌شهر."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="blog-posts">
+            <div class="container">
+                <h2>خواندنی‌های دیجی‌شهر</h2>
+                <div class="posts-container">
+                    <div class="post-card">
+                        <img src="https://via.placeholder.com/350x200" alt="Blog post 1">
+                        <h3>راهنمای خرید اقساطی لوازم خانگی</h3>
+                        <a href="#">بیشتر...</a>
+                    </div>
+                    <div class="post-card">
+                        <img src="https://via.placeholder.com/350x200" alt="Blog post 2">
+                        <h3>چطور بهترین گوشی موبایل را انتخاب کنیم؟</h3>
+                        <a href="#">بیشتر...</a>
+                    </div>
+                    <div class="post-card">
+                        <img src="https://via.placeholder.com/350x200" alt="Blog post 3">
+                        <h3>سرمایه‌گذاری هوشمندانه در بازار ارز دیجیتال</h3>
+                        <a href="#">بیشتر...</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="faq">
+            <div class="container">
+                <h2>سوالات متداول</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>برای دریافت وام به چه مدارکی نیاز است؟</span>
+                            <span>+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>برای دریافت وام از دیجی‌شهر، تنها به کارت ملی هوشمند نیاز دارید. تمام مراحل آنلاین است.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>آیا برای دریافت وام به ضامن نیاز است؟</span>
+                            <span>+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>خیر، برای دریافت اعتبار از دیجی‌شهر نیازی به ضامن یا چک کارمندی ندارید.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>سقف اعتبار دیجی‌شهر چقدر است؟</span>
+                            <span>+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>شما می‌توانید تا سقف ۲۰۰ میلیون تومان اعتبار دریافت کنید.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-about">
+                    <h3>دیجی‌شهر</h3>
+                    <p>پلتفرم آنلاین خرید اقساطی و دریافت وام کالا. با دیجی‌شهر می‌توانید به سادگی و بدون نیاز به ضامن، از فروشگاه‌های معتبر سراسر کشور خرید کنید.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>دسترسی سریع</h4>
+                    <ul>
+                        <li><a href="#">صفحه اصلی</a></li>
+                        <li><a href="#">فروشگاه</a></li>
+                        <li><a href="#">درباره ما</a></li>
+                        <li><a href="#">سوالات متداول</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>خدمات مشتریان</h4>
+                    <ul>
+                        <li><a href="#">پاسخ به پرسش‌ها</a></li>
+                        <li><a href="#">شرایط استفاده</a></li>
+                        <li><a href="#">حریم خصوصی</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>تماس با ما</h4>
+                    <p>تلفن: ۰۲۱-۱۲۳۴۵۶۷۸</p>
+                    <p>آدرس: تهران، خیابان آزادی، پلاک ۱۲۳</p>
+                </div>
+            </div>
+            <div class="footer-secondary">
+                <div class="footer-social">
+                    <!-- Social media icons would go here -->
+                </div>
+                <div class="footer-copy">
+                    <p>&copy; ۱۴۰۳ - تمام حقوق برای دیجی‌شهر محفوظ است.</p>
+                </div>
+                <div class="footer-trust">
+                    <!-- Trust symbols like e-namad would go here -->
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
