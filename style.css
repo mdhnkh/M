@@ -1,16 +1,585 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
 body {
-    font-family: sans-serif;
+    font-family: 'Vazirmatn', 'Tahoma', sans-serif; /* Common fonts for Persian */
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #fff;
+    color: #333;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #004AAD;
+    text-decoration: none;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+header nav ul li a:hover {
+    color: #004AAD;
+}
+
+.user-actions .login-btn {
+    background-color: #004AAD;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.user-actions .login-btn:hover {
+    background-color: #003380;
+}
+
+footer {
+    background-color: #004AAD; /* A blue shade from the screenshot */
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    display: block; /* Ensure main is treated as a block element */
+}
+
+section {
+    padding: 2rem 1rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(to left, #004AAD, #002275);
+    color: white;
+    text-align: right;
+}
+
+#hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#hero .hero-content {
+    max-width: 50%;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.loan-calculator {
+    background-color: #fff;
+    color: #333;
+    padding: 2rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.loan-calculator .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.loan-calculator label {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.loan-calculator input {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 150px; /* Adjust as needed */
+}
+
+.loan-calculator .btn-primary {
+    background-color: #FF6F00; /* Orange color from screenshot */
+    color: white;
+    border: none;
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    align-self: flex-end; /* Align button with bottom of inputs */
+}
+
+#hero .hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Categories Section */
+#categories {
+    background-color: #fff;
+    text-align: center;
+}
+
+#categories h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1.5rem;
+}
+
+.category-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    margin: 0;
+    cursor: pointer;
+}
+
+.category-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 0.75rem;
     background-color: #f0f0f0;
 }
 
-canvas {
-    border: 1px solid #ccc;
+.category-item span {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Credit Banner Section */
+#credit-banner {
+    background-color: #004AAD;
+    color: white;
+    text-align: center;
+}
+
+#credit-banner h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.credit-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.credit-card {
+    background-color: #fff;
+    color: #333;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.credit-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.credit-card .amount {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #004AAD;
+    margin-bottom: 0.5rem;
+}
+
+.credit-card span {
     display: block;
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.credit-card .btn-secondary {
+    background-color: transparent;
+    color: #004AAD;
+    border: 2px solid #004AAD;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.credit-card .btn-secondary:hover {
+    background-color: #004AAD;
+    color: white;
+}
+
+
+/* Loan Steps Section */
+#loan-steps {
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#loan-steps h2 {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.step {
+    max-width: 220px;
+}
+
+.step img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.step h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.step p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Loan Providers Section */
+#loan-providers {
+    background-color: #fff;
+    text-align: center;
+}
+
+#loan-providers h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.logos-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.logos-container img {
+    height: 40px;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.3s;
+}
+
+.logos-container img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* App Showcase Section */
+#app-showcase {
+    background-color: #f9f9f9;
+}
+
+#app-showcase .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3rem;
+}
+
+.app-showcase-content {
+    max-width: 50%;
+}
+
+.app-showcase-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.app-showcase-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+.app-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.app-buttons .app-btn img {
+    height: 50px;
+}
+
+/* Testimonials Section */
+#testimonials {
+    background-color: #fff;
+    text-align: center;
+}
+
+#testimonials h2 {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 350px;
+    text-align: right;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.testimonial-author img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 1rem;
+}
+
+.testimonial-author h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+.testimonial-author span {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.testimonial-card p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #444;
+}
+
+
+/* Blog Posts Section */
+#blog-posts {
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#blog-posts h2 {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+}
+
+.posts-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.post-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    max-width: 350px;
+    text-align: right;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.post-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.post-card h3 {
+    font-size: 1.2rem;
+    padding: 1rem 1.5rem;
+}
+
+.post-card a {
+    display: block;
+    padding: 0 1.5rem 1.5rem;
+    text-decoration: none;
+    color: #004AAD;
+    font-weight: bold;
+}
+
+/* FAQ Section */
+#faq {
+    background-color: #fff;
+    text-align: center;
+}
+
+#faq h2 {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+}
+
+.faq-container {
+    max-width: 800px;
     margin: 0 auto;
+    text-align: right;
+}
+
+.faq-item {
+    border-bottom: 1px solid #eee;
+    padding: 1.5rem 0;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.faq-question span:last-child {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #004AAD;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding-top: 0;
+    color: #666;
+}
+
+.faq-answer p {
+    padding: 1rem 0;
+}
+
+/* A class to be toggled with JS */
+.faq-item.active .faq-answer {
+    max-height: 100px; /* Adjust as needed */
+}
+footer {
+    background-color: #0d2c54; /* Dark blue from screenshot */
+    color: #f0f0f0;
+    padding: 3rem 0 1rem;
+    text-align: right;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #2a4a75;
+}
+
+.footer-about {
+    max-width: 300px;
+}
+
+.footer-about h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.footer-links h4, .footer-contact h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #f0f0f0;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #fff;
+}
+
+.footer-contact p {
+    margin-bottom: 0.5rem;
+}
+
+.footer-secondary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.5rem;
+    font-size: 0.9rem;
 }
